@@ -1,9 +1,9 @@
 apiVersion: backstage.io/v1alpha1
-kind: User
+kind: MCP
 metadata:
   name: sathishbayer
+  description: Sample Managed Control Plane
 spec:
-  profile:
-    displayName: Sathishkumar murugesan
-    email: sathishkumar.murugesan.ext@bayer.com
-  memberOf: []
+  owner: team-platform
+  region: us-east-1
+  environment: production
