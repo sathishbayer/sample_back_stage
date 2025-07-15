@@ -1,9 +1,10 @@
 apiVersion: backstage.io/v1alpha1
-kind: MCP
+kind: Component
 metadata:
-  name: sathishbayer
-  description: Sample Managed Control Plane
+  annotations:
+    grafana/alert-label-selector: "service=awesome-service"
+    grafana/dashboard-selector: "(tags @> 'my-service' || tags @> 'my-service-slo') && tags @> 'generated'"
+    grafana/overview-dashboard: 'https://devopsanalytics-np.int.bayer.com/grafana/d/KGkUnV-Vz/dora-validation?orgId=1&kiosk'
+  name: my-entity
+  namespace: default
 spec:
-  owner: team-platform
-  region: us-east-1
-  environment: production
